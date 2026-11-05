@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Info PWA</title>
+<meta name="description" content="Offline-ready student information system">
+<meta name="theme-color" content="#1f6f5c">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Student Info</h1>
+  <span id="net-status" class="badge badge-online">Online</span>
+</header>
+
+<main class="container">
+  <div id="install-bar" class="install-bar" hidden>
+    <span>Install this app on your device for quick access and offline use.</span>
+    <button id="install-btn" class="btn" type="button">Install app</button>
+  </div>
+
+  <nav class="tabs" aria-label="Sections">
+    <button class="tab active" data-tab="students" type="button">Students</button>
+    <button class="tab" data-tab="install" type="button">How to install</button>
+    <button class="tab" data-tab="deploy" type="button">Cloud deployment</button>
+  </nav>
+
+  <!-- 1. Student information -->
+  <section id="tab-students" class="panel">
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search name, reg. no. or course" aria-label="Search students">
+      <select id="course-filter" aria-label="Filter by course"><option value="">All courses</option></select>
+    </div>
+    <p id="source-note" class="note"></p>
+    <div id="student-list" class="grid"></div>
+    <p id="empty" class="note" hidden>No students match your search.</p>
+  </section>
+
+  <!-- 5. Installation guide -->
+  <section id="tab-install" class="panel" hidden>
+    <h2>Installing on a mobile device</h2>
+    <h3>Android (Chrome)</h3>
+    <ol>
+      <li>Open the app's web address in Chrome.</li>
+      <li>Tap <strong>Install app</strong> on the green bar, or tap the <strong>⋮</strong> menu.</li>
+      <li>Choose <strong>Install app</strong> (or <strong>Add to Home screen</strong>).</li>
+      <li>Tap <strong>Install</strong>. The icon now appears on your home screen.</li>
+    </ol>
+    <h3>iPhone / iPad (Safari)</h3>
+    <ol>
+      <li>Open the web address in Safari.</li>
+      <li>Tap the <strong>Share</strong> button.</li>
+      <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+      <li>Tap <strong>Add</strong>.</li>
+    </ol>
+    <h3>Desktop (Chrome or Edge)</h3>
+    <p>Click the install icon at the right end of the address bar, then <strong>Install</strong>.</p>
+    <p class="note">Installing needs HTTPS (or <code>localhost</code> while testing).</p>
+  </section>
+
+  <!-- 6. Cloud deployment -->
+  <section id="tab-deploy" class="panel" hidden>
+    <h2>Deploying to the cloud</h2>
+    <p>A PWA is only static files, so any static host works. Hosts provide HTTPS automatically, which service workers require.</p>
+    <h3>Option A: GitHub Pages</h3>
+    <ol>
+      <li>Create a repository on github.com and upload all the project files to the root.</li>
+      <li>Open <strong>Settings → Pages</strong>.</li>
+      <li>Under <strong>Branch</strong>, choose <code>main</code> and <code>/ (root)</code>, then <strong>Save</strong>.</li>
+      <li>After about a minute the app is live at <code>https://username.github.io/repository-name/</code>.</li>
+    </ol>
+    <h3>Option B: Netlify (drag and drop)</h3>
+    <ol>
+      <li>Sign in at app.netlify.com.</li>
+      <li>Open <strong>Add new site → Deploy manually</strong>.</li>
+      <li>Drag the project folder onto the page.</li>
+      <li>Netlify gives you an HTTPS address such as <code>https://your-site.netlify.app</code>.</li>
+    </ol>
+    <h3>Option C: Firebase Hosting</h3>
+    <ol>
+      <li>Install Node.js, then run <code>npm install -g firebase-tools</code>.</li>
+      <li>Run <code>firebase login</code>, then <code>firebase init hosting</code> (public folder: the project folder).</li>
+      <li>Run <code>firebase deploy</code>.</li>
+    </ol>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

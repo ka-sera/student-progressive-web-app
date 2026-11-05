@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Wanjiru Kamau",  "regNo": "SC211/0001/2024", "course": "Computer Science",        "year": 2, "email": "wanjiru.kamau@example.com" },
+  { "id": 2, "name": "Brian Otieno",   "regNo": "IT211/0002/2024", "course": "Information Technology",  "year": 2, "email": "brian.otieno@example.com" },
+  { "id": 3, "name": "Amina Hassan",   "regNo": "BU101/0003/2024", "course": "Business Administration", "year": 1, "email": "amina.hassan@example.com" },
+  { "id": 4, "name": "Kipchoge Rotich","regNo": "EN301/0004/2024", "course": "Civil Engineering",       "year": 3, "email": "kipchoge.rotich@example.com" },
+  { "id": 5, "name": "Grace Wambui",   "regNo": "NU201/0005/2024", "course": "Nursing",                 "year": 1, "email": "grace.wambui@example.com" },
+  { "id": 6, "name": "Daniel Kiprop",  "regNo": "SC211/0006/2024", "course": "Computer Science",        "year": 3, "email": "daniel.kiprop@example.com" },
+  { "id": 7, "name": "Faith Chebet",   "regNo": "ED401/0007/2024", "course": "Education",               "year": 4, "email": "faith.chebet@example.com" },
+  { "id": 8, "name": "Samuel Mwangi",  "regNo": "AG501/0008/2024", "course": "Agriculture",             "year": 2, "email": "samuel.mwangi@example.com" }
+]
